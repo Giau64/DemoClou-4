@@ -12,9 +12,9 @@
 		$id=$_GET['ma'];
 		$result = pg_query($conn, "SELECT * FROM public.product Where product_id='$id'");
 		if (!$result) { //add this check.
- 			die('Invalid query: ' . pg_errormessage($conn));
+ 			die('Invalid query: '.pg_errormessage($conn));
 		}
- 		while($row = pg_fetch_array($result,NULL, PGSQL_ASSOC)){
+ 		while($row = pg_fetch_array($result,NULL,PGSQL_ASSOC)){
  	?>
     <form method="GET" action="#">
         <div class="col-sm-5">

@@ -187,9 +187,9 @@
 				{
 					if($pic['size']<= 614400)
 					{
-						$sq="SELECT * FROM public.product WHERE product_id != '$id' and product_name='$proname'";
-						$result=pg_query($conn,$sq);
-						if(pg_num_rows($result)==0)
+						$sq= "SELECT * FROM public.product WHERE product_id != '$id' and product_name='$proname'";
+						$result= pg_query($conn,$sq);
+						if( pg_num_rows($result)==0)
 						{
 						copy($pic['tmp_name'], "product-imgs/".$pic['name']);
 						$filePic = $pic['name'];
@@ -217,9 +217,9 @@
 			}
 			else
 			{
-				$sq="SELECT * FROM public.product where product_id != '$id' and product_name='$proname'";
+				$sq= "SELECT * FROM public.product where product_id != '$id' and product_name='$proname'";
 				$result= pg_query($conn,$sq);
-				if(pg_num_rows($result)==0)
+				if( pg_num_rows($result)==0)
 				{
 					$sqlstring="UPDATE product SET product_name='$proname',
 					price=$price,prodes='$detail',quantity=$qty,

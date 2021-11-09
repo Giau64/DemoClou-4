@@ -91,7 +91,7 @@
                             $result = pg_query($conn, "SELECT * FROM public.product");
 
                             if (!$result) { //add this check.
-                                die('Invalid query: ' . pg_errormessage($conn));
+                                die('Invalid query: ' .pg_errormessage($conn));
                             }
 
                         
